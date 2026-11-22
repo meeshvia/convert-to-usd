@@ -12,22 +12,12 @@ Chrome makes developer registration available only in supported countries and re
 
 ## 2. Prepare the extension package
 
-The Chrome Web Store requires Manifest V3, a description, and extension icons. The source is already Manifest V3, but add the store assets before uploading:
+The Chrome Web Store requires Manifest V3, a description, and extension icons. This repository already includes the required 48 px and 128 px icon set, and `npm run package` includes it in the ZIP. Before uploading:
 
-1. Create 48×48 px and 128×128 px PNG extension icons. Use an original design; do not use Google or other third-party marks without permission.
-2. Add the icons to the repository, for example under `icons/`, and reference them in `manifest.json`:
-
-   ```json
-   "icons": {
-     "48": "icons/icon-48.png",
-     "128": "icons/icon-128.png"
-   }
-   ```
-
-3. Update `package.json` so `npm run package` includes the `icons/` files in `convert-to-usd.zip`.
-4. Increase the manifest `version` for every upload after the first one. A Chrome Web Store version can never be replaced with the same or a lower version number.
-5. Run `npm test`, then load the extension unpacked in Chrome and test a supported amount such as `€1,234.56`, `£120`, and `5,000 JPY`.
-6. Run `npm run package`. Upload the resulting ZIP—not a `.crx` or `.pem` file. Ensure `manifest.json` is at the root of the ZIP.
+1. Confirm the icons are present in the `icons/` folder and referenced by `manifest.json`. Use an original design; do not use Google or other third-party marks without permission.
+2. Increase the manifest `version` for every upload after the first one. A Chrome Web Store version can never be replaced with the same or a lower version number.
+3. Run `npm test`, then load the extension unpacked in Chrome and test a supported amount such as `€1,234.56`, `£120`, and `5,000 JPY`.
+4. Run `npm run package`. Upload the resulting ZIP—not a `.crx` or `.pem` file. Ensure `manifest.json` is at the root of the ZIP.
 
 Never upload or commit a `.pem` file. It is a private signing key.
 
