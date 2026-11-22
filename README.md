@@ -40,6 +40,8 @@ When you select **Convert to USD**, the extension sends the source currency code
 
 Rates are indicative and may differ from card, bank, or cash-exchange rates.
 
+Read the complete [privacy policy](PRIVACY.md). Maintainers can follow the [Chrome Web Store publishing guide](docs/chrome-web-store-publishing.md) to prepare a compliant store submission.
+
 ## Supported input examples
 
 | Selected text | Interpreted as |
