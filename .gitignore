@@ -1,0 +1,12 @@
+# Local extension packages and signing keys
+*.crx
+*.pem
+*.zip
+
+# Local scratch files and macOS metadata
+.amp/in/
+.DS_Store
+
+# Node.js dependencies and logs
+node_modules/
+npm-debug.log*

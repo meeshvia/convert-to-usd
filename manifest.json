@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Convert to USD",
+  "version": "1.0.0",
+  "description": "Convert highlighted foreign-currency amounts to US dollars from the right-click menu.",
+  "permissions": ["contextMenus"],
+  "host_permissions": ["https://api.frankfurter.dev/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

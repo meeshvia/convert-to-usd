@@ -1,0 +1,9 @@
+{
+  "name": "convert-to-usd-extension",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node currency.test.js",
+    "package": "rm -f convert-to-usd.zip && zip -r convert-to-usd.zip manifest.json background.js content.js currency.js"
+  }
+}
