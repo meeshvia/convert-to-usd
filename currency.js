@@ -2,7 +2,9 @@ const SYMBOLS = {
   "A$": "AUD",
   "C$": "CAD",
   "CA$": "CAD",
+  "CN¥": "CNY",
   "HK$": "HKD",
+  "MX$": "MXN",
   "NZ$": "NZD",
   "S$": "SGD",
   "R$": "BRL",
@@ -13,20 +15,22 @@ const SYMBOLS = {
   "₹": "INR",
   "₩": "KRW",
   "₺": "TRY",
-  "₽": "RUB",
-  "₴": "UAH",
   "₪": "ILS",
-  "₫": "VND",
   "₱": "PHP",
   "฿": "THB",
+  "Kč": "CZK",
+  "Ft": "HUF",
+  "Rp": "IDR",
+  "RM": "MYR",
+  "lei": "RON",
   "zł": "PLN",
   "kr": "SEK"
 }
 
 const CODES = new Set([
-  "AED", "ARS", "AUD", "BRL", "BGN", "CAD", "CHF", "CNY", "CZK", "DKK", "EUR",
-  "GBP", "HKD", "HUF", "IDR", "ILS", "INR", "ISK", "JPY", "KRW", "MXN", "MYR", "NOK",
-  "NZD", "PHP", "PLN", "RON", "SEK", "SGD", "THB", "TRY", "UAH", "VND", "ZAR"
+  "AUD", "BRL", "CAD", "CHF", "CNY", "CZK", "DKK", "EUR", "GBP", "HKD", "HUF", "IDR",
+  "ILS", "INR", "ISK", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PLN", "RON",
+  "SEK", "SGD", "THB", "TRY", "ZAR"
 ])
 
 function parseNumber(value) {
