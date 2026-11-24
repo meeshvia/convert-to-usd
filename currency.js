@@ -61,7 +61,7 @@ export function parseCurrency(selection) {
   const amount = readAmount(text)
   if (!amount) return null
 
-  const codeMatch = text.toUpperCase().match(/\b([A-Z]{3})\b/)
+  const codeMatch = text.toUpperCase().match(/(?:^|[^A-Z])([A-Z]{3})(?=$|[^A-Z])/)
   if (codeMatch && CODES.has(codeMatch[1])) {
     return { amount, currency: codeMatch[1] }
   }
